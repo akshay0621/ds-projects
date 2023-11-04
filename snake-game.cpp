@@ -11,7 +11,7 @@ eDirection dir;
 int score=0;
 int tailX[100],tailY[100],nTail;
 void input(){
-    //keyboard input
+    //input from user(keyboard)
 if(_kbhit()){
 
     switch(_getch()){
@@ -42,7 +42,7 @@ int prevY=tailY[0];
 tailX[0]=x; // tail pointing to head
 tailY[0]=y;
 for(int i=1;i<nTail;i++){
-// prev2X,prev2Y -- last segment of tail cooedinates
+// prev2X,prev2Y -- last segment of tail coordinates
 int prev2X=tailX[i];
 int prev2Y=tailY[i];
 // snake last snake is pointed to first segment of tail coordinate which is in prevX,prevY
@@ -97,7 +97,7 @@ dir=stop;
  fruitY=rand()%height;
 
 }
-//display border snake and fruit
+//display border, snake and fruit
 void draw(){
     system("CLS");
     for(int i=0;i<width;i++){
@@ -133,7 +133,7 @@ void draw(){
         }
         cout << endl;
     }
-// giving score
+// displaying the score
     for(int i=0;i<width;i++){
         cout<<"#";
     }
